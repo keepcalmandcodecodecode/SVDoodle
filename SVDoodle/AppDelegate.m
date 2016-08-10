@@ -21,6 +21,8 @@
     CGRect windowFrame = [[UIScreen mainScreen] bounds];
     UIWindow *theWindow = [[UIWindow alloc] initWithFrame:windowFrame];
     [self setWindow:theWindow];
+    UIStoryboard *rootStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    theWindow.rootViewController = [rootStoryboard instantiateInitialViewController];
     return YES;
 }
 
